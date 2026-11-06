@@ -4,18 +4,23 @@
 
 Selected code and screenshots from Dean Jefferies' ongoing 2D action RPG. The project combines connected platforming environments, enemy encounters, persistent equipment and six skillbooks. This repository is a curated technical showcase, not a complete game distribution.
 
-![Ruined Spire map and monsters](screenshots/current-map-one.png)
+![The Hollow Pontiff casting Heaven's Divide](screenshots/boss-heavens-divide.png)
 
 ## Explore the project
 
 | Area | What to inspect |
 |---|---|
-| [Maps and monsters](#maps-and-monsters) | World presentation, encounters and minimap |
+| [Maps and monsters](#maps-and-monsters) | World presentation and enemy encounters |
+| [Combat in action](#combat-in-action) | Boss casting, Assassin ultimate and Lightning strike |
 | [Skillbook interface](#skillbook-interface) | Six skill categories, ranks and point investment |
 | [Selected code](#selected-code) | Item data, targeting and a timed enemy attack |
 | [How to use this repository](#how-to-use-this-repository) | Navigate the gallery and source extracts |
 
 ## Maps and monsters
+
+### Ruined Spire
+
+![Ruined Spire and crystal enemies](screenshots/current-map-one.png)
 
 ### Main town
 
@@ -27,15 +32,35 @@ The town brings together NPCs, storage, portals and the skillbook interaction wi
 
 ![Map five](screenshots/current-map-five.png)
 
-### Boss visual preview
+## Combat in action
 
-An isolated preview of a boss used in the project. This image shows the visual asset rather than a combat recording; it is included as project context, not a claim of original illustration work.
+### The Hollow Pontiff — Heaven's Divide
 
-![Boss visual preview](screenshots/boss-preview.png)
+The current courtyard encounter includes the boss's casting animation, a sustained beam, timed hazards and a dedicated health display.
+
+![The Hollow Pontiff casting Heaven's Divide](screenshots/boss-heavens-divide.png)
+
+### Celestial bells
+
+Summoned bells mark areas of the arena with expanding warning rings.
+
+![The Hollow Pontiff summoning celestial bells](screenshots/boss-bells.png)
+
+### Assassin ultimate — Thousandfold Blades
+
+The Assassin book's channelled ultimate creates a rotating blade vortex and outward blade waves.
+
+![Thousandfold Blades in action](screenshots/assassin-thousandfold.png)
+
+### Lightning — Thunderbolt
+
+A targeted lightning strike connects the sky effect to an enemy, with an impact effect at the target.
+
+![Lightning strike hitting an enemy](screenshots/lightning-strike.png)
 
 ## Skillbook interface
 
-The current catalog contains **Basic, Blood, Lightning, Assassin, Barrier and Celestial**. Screenshots were captured from the current source on 5 November 2026 using an isolated demonstration profile with all books unlocked. Normal progression controls which books appear. The tab strip scrolls, so not all six labels fit at once.
+The current catalog contains **Basic, Blood, Lightning, Assassin, Barrier and Celestial**. All six books are unlocked in this demonstration profile. Normal progression controls which books appear. The tab strip scrolls, so not all six labels fit at once.
 
 ### Lightning — skill cards and investment controls
 ![Lightning book](screenshots/current-lightning.png)
@@ -79,8 +104,15 @@ Enemies register with a shared registry. Invalid references are cleaned up befor
 
 The dash separates windup, travel and recovery. It checks available floor and walls, applies movement through the existing character collider and tracks already-hit targets. Cooldown prevents immediate repeats.
 
+## Capture details
+
+Captured in Godot from the current source on 6 November 2026. These staged views hide the unfinished player and companion, pause enemy animation frames, omit overlapping or clipped enemies, and align health bars with visible sprites. A separate camera frames the boss. Combat effects are rendered by the current game systems.
+
 ## Status and development
 
 **Work in progress.** Movement, character presentation and balance are still under development; no video or finished-release claim is included. The broader project is developed with AI assistance. This gallery documents project systems and integration, not sole authorship of every code line or visual asset.
 
 The complete local project uses Godot 4.7.1. This showcase intentionally excludes the full asset library, save data, backups and editor caches. Its selected source extracts have not been tested as standalone applications.
+
+
+
